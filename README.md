@@ -2,7 +2,7 @@
 
 This is a simple example of how to use the GitHub search API within the context of a react application.
 
-I had a 2 hour time limit on brainstorming and making this, so there are many features still to be implemented such as sorting, pagination, etc...
+I had roughly a 2 hour cap on brainstorming and making this, so there are many features still to be implemented such as pagination, more criteria, etc...
 
 ## Installation
 
