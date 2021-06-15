@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <fieldset>
+        <fieldset style={{ marginTop: '1em', marginBottom: '1em' }}>
           <input
             type="text"
             placeholder="Repository Name"
@@ -31,15 +31,26 @@ function App() {
           <button onClick={fetchRepos}>Search</button>
         </fieldset>
 
-        <ul>
-          {repos.map((repo) => (
-            <li key={repo.id}>
-              <a href={repo.html_url} target="_blank">
-                {repo.full_name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div style={{ paddingRight: '50px' }}>
+          <ul style={{ listStyle: 'none' }}>
+            {repos.map((repo) => (
+              <>
+                <li key={repo.id}>
+                  <a
+                    className="App-link"
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {repo.full_name}
+                  </a>
+                  <p>{repo.description}</p>
+                </li>
+                <hr />
+              </>
+            ))}
+          </ul>
+        </div>
       </header>
     </div>
   );
