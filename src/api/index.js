@@ -4,7 +4,7 @@ const BASE_URL = 'https://api.github.com';
  * Uses the github search api to search for repositories:
  * https://docs.github.com/en/rest/reference/search#search-repositories
  */
-export function searchRepos() {
+export function searchRepos(repoName, language) {
   const options = {
     method: 'GET',
     headers: {
@@ -16,8 +16,7 @@ export function searchRepos() {
   };
 
   return fetch(
-    // TODO: populate the query string with user input
-    `${BASE_URL}/search/repositories?q=tetris+language:assembly&sort=stars&order=desc`,
+    `${BASE_URL}/search/repositories?q=${repoName}+language:${language}&sort=stars&order=desc`,
     options
   )
     .then((res) => res.json())
