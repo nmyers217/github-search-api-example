@@ -1,7 +1,19 @@
+import { useEffect, useState } from 'react';
+
 import logo from './logo.svg';
 import './App.css';
+import { searchRepos } from './api';
 
 function App() {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    async function fetchRepos() {
+      setRepos(await searchRepos());
+    }
+    fetchRepos();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +30,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <pre>{repos && repos.length > 0 && JSON.stringify(repos[0])}</pre>
     </div>
   );
 }
