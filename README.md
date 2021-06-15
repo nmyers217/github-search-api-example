@@ -1,4 +1,36 @@
-# Getting Started with Create React App
+# GitHub Search API Example
+
+This is a simple example of how to use the GitHub search API within the context of a react application.
+
+I had a 2 hour time limit on brainstorming and making this, so there are many features still to be implemented such as sorting, pagination, etc...
+
+## Installation
+
+Please have at least the most recent LTS version of NodeJS and NPM, which can be installed from [here](https://nodejs.org/en/).
+
+Afterwards clone the repository and install project dependencies.
+
+```bash
+git clone https://github.com/nmyers217/github-search-api-example
+cd github-search-api-example
+npm install
+```
+
+## Usage
+
+Start the application and then view it in your browser at [http://localhost:3000/](http://localhost:3000/)
+
+```bash
+npm start
+```
+
+I have left the official create-react-app readme below for reference.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
