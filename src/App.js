@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import './App.css';
 import { searchRepos } from './api';
+import Repo from './Repo';
 
 function App() {
   const [repos, setRepos] = useState([]);
@@ -34,20 +35,7 @@ function App() {
         <div style={{ paddingRight: '50px' }}>
           <ul style={{ listStyle: 'none' }}>
             {repos.map((repo) => (
-              <>
-                <li key={repo.id}>
-                  <a
-                    className="App-link"
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {repo.full_name}
-                  </a>
-                  <p>{repo.description}</p>
-                </li>
-                <hr />
-              </>
+              <Repo repo={repo} />
             ))}
           </ul>
         </div>
